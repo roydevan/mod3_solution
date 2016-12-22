@@ -1,0 +1,9 @@
+<h3>Title: {{ menu.myTitle }}</h3>
+
+  <li ng-repeat="x in menu.categories">
+{{ x.short_name }} || {{x.name}} || {{x.description}}
+<button ng-click="menu.onRemove({index: $index});">Don't want this one!</button>
+
+
+  </li>
+  <div class="error" ng-if="menu.categories.length===0">Nothing found</div>
